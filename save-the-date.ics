@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Mirelle e Gilvan//Save the Date//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mirelle-gilvan-casamento-20261226@save-the-date
+DTSTAMP:20260816T000000Z
+DTSTART;TZID=America/Sao_Paulo:20261226T150000
+DTEND;TZID=America/Sao_Paulo:20261226T180000
+SUMMARY:Casamento Mirelle & Gilvan
+DESCRIPTION:Casamento de Mirelle & Gilvan. Cerimônia e recepção no mesmo local.
+LOCATION:Chácara Girassol - Rodovia 220, Tombão
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

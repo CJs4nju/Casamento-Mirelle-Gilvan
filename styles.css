@@ -171,6 +171,23 @@ h1, h2, h3, h4 {
   transform: translateY(-2px);
 }
 
+/* Foto de abertura */
+.opening-photo {
+  width: 100%;
+  height: clamp(520px, 82vh, 900px);
+  overflow: hidden;
+  background: #ead7bd;
+  line-height: 0;
+}
+
+.opening-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 44%;
+}
+
 /* Hero */
 .original-hero {
   position: relative;
@@ -492,6 +509,8 @@ footer p { margin: 0; }
 
 @media (max-width: 720px) {
   .original-section { padding: 4.5rem 1.25rem; }
+  .opening-photo { height: min(78vh, 760px); }
+  .opening-photo img { object-position: center center; }
   .original-nav__inner { flex-wrap: wrap; }
   .original-nav a { flex: 1 0 auto; padding: 0.85rem 0.5rem; font-size: 0.68rem; text-align: center; }
   .pix-box { flex-direction: column; align-items: center; text-align: center; }

@@ -352,7 +352,7 @@ strong {
 }
 
 /* Foto de fundo da seção de detalhes */
-.details-photo-section {
+.original-section.details-photo-section {
   background: linear-gradient(rgba(23, 26, 74, 0.68), rgba(23, 26, 74, 0.72)), url('./foto-detalhes.jpeg') center/cover no-repeat;
   color: #fff;
 }

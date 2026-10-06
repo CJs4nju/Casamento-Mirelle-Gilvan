@@ -354,14 +354,13 @@ strong {
 /* Galeria de fotos dos detalhes */
 .details-gallery {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 1rem;
   width: min(760px, 100%);
   margin: 2.25rem auto 0;
 }
 
-.details-gallery__item,
-.details-gallery__placeholder {
+.details-gallery__item {
   position: relative;
   aspect-ratio: 4 / 3;
   margin: 0;
@@ -379,17 +378,6 @@ strong {
   object-fit: cover;
 }
 
-.details-gallery__placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px dashed #cbd2df;
-  background: linear-gradient(135deg, #fff, var(--paper-soft));
-  color: var(--ink-soft);
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
 
 /* Grid de Detalhes Completo */
 .details-grid {
@@ -539,6 +527,5 @@ footer p { margin: 0; }
   .map-card { height: 300px; }
   .details-grid { grid-template-columns: 1fr; }
   .details-gallery { grid-template-columns: 1fr; max-width: 520px; }
-  .details-gallery__item,
-  .details-gallery__placeholder { aspect-ratio: 16 / 10; }
+  .details-gallery__item { aspect-ratio: 16 / 10; }
 }

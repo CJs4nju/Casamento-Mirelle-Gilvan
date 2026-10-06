@@ -17,7 +17,7 @@
       <div class="music-modal__title">
         <span>🎵</span> Música Ambiente
       </div>
-      <p>Gostaria de ouvir nossa trilha sonora especial (“Turning Page” - Sleeping At Last) durante a navegação para uma melhor experiência?</p>
+      <p>Gostaria de ouvir nossa trilha sonora especial durante a navegação para uma melhor experiência?</p>
       <div class="music-modal__actions">
         <button class="site-button site-button--navy" id="play-music" type="button">Sim, tocar música</button>
         <button class="site-button site-button--quiet" id="skip-music" type="button">Não, obrigado</button>
@@ -28,11 +28,15 @@
   <!-- Botão Flutuante de Música -->
   <button class="music-float" id="music-float" style="display: none;" type="button" aria-label="Tocar música" title="Tocar música"><span aria-hidden="true">▶</span><span class="sr-only">Tocar música</span></button>
 
-  <!-- Áudio de Fundo Local -->
-  <audio id="bg-audio" loop preload="metadata">
-    <source src="./musica.mp3" type="audio/mpeg">
-    Seu navegador não suporta áudio HTML5.
-  </audio>
+  <!-- Música de Fundo do YouTube (player oculto) -->
+  <iframe
+    id="bg-youtube"
+    class="youtube-audio-player"
+    src="https://www.youtube.com/embed/SaITx7gIC90?enablejsapi=1&origin=https%3A%2F%2Fcjs4nju.github.io&controls=0&rel=0&playsinline=1&loop=1&playlist=SaITx7gIC90"
+    title="Trilha sonora do convite"
+    allow="autoplay; encrypted-media"
+    aria-hidden="true">
+  </iframe>
 
   <!-- Hero com Contagem no Topo -->
   <header class="original-hero" id="inicio">

@@ -34,22 +34,25 @@ document.addEventListener('DOMContentLoaded', () => {
   updateCountdown();
   window.setInterval(updateCountdown, 1000);
 
-  // Controle de Música Ambiente
-  const audio = byId('bg-audio');
+  // Controle de Música Ambiente — trilha hospedada no YouTube
+  const youtubePlayer = byId('bg-youtube');
   const musicModal = byId('music-modal');
   const playMusicButton = byId('play-music');
   const skipMusicButton = byId('skip-music');
   const floatingMusicButton = byId('music-float');
+  let isMusicPlaying = false;
 
-  function showMusicButton(isPlaying, unavailable = false) {
+  function sendYouTubeCommand(command) {
+    if (!youtubePlayer || !youtubePlayer.contentWindow) return;
+    youtubePlayer.contentWindow.postMessage(JSON.stringify({
+      event: 'command',
+      func: command,
+      args: []
+    }), '*');
+  }
+
+  function showMusicButton(isPlaying) {
     floatingMusicButton.style.display = 'inline-flex';
-    if (unavailable) {
-      floatingMusicButton.innerHTML = '<span aria-hidden="true">!</span><span class="sr-only">Áudio indisponível</span>';
-      floatingMusicButton.setAttribute('aria-label', 'Áudio indisponível');
-      floatingMusicButton.title = 'Áudio indisponível';
-      floatingMusicButton.disabled = true;
-      return;
-    }
     floatingMusicButton.disabled = false;
     const icon = isPlaying ? '⏸' : '▶';
     const label = isPlaying ? 'Pausar música' : 'Tocar música';
@@ -63,37 +66,28 @@ document.addEventListener('DOMContentLoaded', () => {
     musicModal.setAttribute('aria-hidden', 'true');
   }
 
-  async function playLocalMusic() {
-    try {
-      audio.load();
-      await audio.play();
-      hideMusicModal();
-      showMusicButton(true);
-    } catch (error) {
-      console.warn('Não foi possível iniciar musica.mp3:', error);
-      hideMusicModal();
-      showMusicButton(false);
-    }
+  function playYouTubeMusic() {
+    sendYouTubeCommand('playVideo');
+    isMusicPlaying = true;
+    hideMusicModal();
+    showMusicButton(true);
   }
 
-  playMusicButton.addEventListener('click', playLocalMusic);
+  playMusicButton.addEventListener('click', playYouTubeMusic);
 
   skipMusicButton.addEventListener('click', () => {
     hideMusicModal();
     showMusicButton(false);
   });
 
-  floatingMusicButton.addEventListener('click', async () => {
-    if (audio.paused) {
-      await playLocalMusic();
-    } else {
-      audio.pause();
+  floatingMusicButton.addEventListener('click', () => {
+    if (isMusicPlaying) {
+      sendYouTubeCommand('pauseVideo');
+      isMusicPlaying = false;
       showMusicButton(false);
+    } else {
+      playYouTubeMusic();
     }
-  });
-
-  audio.addEventListener('error', () => {
-    showMusicButton(false, true);
   });
 
   // Mostrar/ocultar chave Pix

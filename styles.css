@@ -310,6 +310,21 @@ h1, h2, h3, h4 {
   background: rgba(255, 255, 255, 0.12);
 }
 
+/* Fundo único para Presentes e Confirmação */
+.gifts-confirmation-background {
+  background: linear-gradient(rgba(23, 26, 74, 0.58), rgba(23, 26, 74, 0.70)), url('./Foto-lista-confirmacao.jpg') center/cover no-repeat;
+}
+
+.gifts-confirmation-section {
+  background: transparent !important;
+  border-bottom: 0;
+}
+
+.gifts-confirmation-section h2,
+.gifts-confirmation-section > .content-narrow > p {
+  color: #fff;
+}
+
 /* Seções */
 .original-section {
   padding: 6rem 1.5rem;

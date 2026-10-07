@@ -374,15 +374,15 @@ strong {
 }
 
 .location-photo-section .map-card {
-  background: rgba(255, 255, 255, 0.20);
-  border-color: rgba(255,255,255,0.45);
+  background: rgba(255, 255, 255, 0.42);
+  border-color: rgba(255,255,255,0.55);
   box-shadow: 0 10px 30px rgba(0,0,0,0.16);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
 }
 
 .location-photo-section .map-card iframe {
-  opacity: 0.30;
+  opacity: 0.42;
 }
 
 /* Grid de Detalhes Completo */
@@ -535,3 +535,5 @@ footer p { margin: 0; }
 }
 
 .details-photo-section .content-narrow > div strong { color: #000; }
+
+.location-photo-section strong { color: #fff; }

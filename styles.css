@@ -392,6 +392,24 @@ strong {
   font-size: 0.98rem;
 }
 
+.location-photo {
+  width: min(740px, 100%);
+  margin: 2.2rem auto 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper-soft);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  line-height: 0;
+}
+
+.location-photo img {
+  display: block;
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+}
+
 .map-card {
   position: relative;
   width: min(740px, 100%);

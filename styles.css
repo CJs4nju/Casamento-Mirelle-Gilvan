@@ -315,13 +315,14 @@ h1, h2, h3, h4 {
   background: linear-gradient(rgba(23, 26, 74, 0.58), rgba(23, 26, 74, 0.70)), url('./Foto-lista-confirmacao.jpg') center/cover no-repeat;
 }
 
-.gifts-confirmation-section {
+.original-section.gifts-confirmation-section {
   background: transparent !important;
-  border-bottom: 0;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
 }
 
-.gifts-confirmation-section + .gifts-confirmation-section {
-  border-top: 0;
+.original-section.gifts-confirmation-section + .original-section.gifts-confirmation-section {
+  border-top: 0 !important;
 }
 
 .gifts-confirmation-section h2,

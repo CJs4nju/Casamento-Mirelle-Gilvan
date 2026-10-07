@@ -355,6 +355,7 @@ strong {
 .original-section.details-photo-section {
   background: linear-gradient(rgba(23, 26, 74, 0.68), rgba(23, 26, 74, 0.72)), url('./foto-detalhes.jpeg') center/cover no-repeat;
   color: #fff;
+  border-bottom: 0;
 }
 
 .details-photo-section h2,

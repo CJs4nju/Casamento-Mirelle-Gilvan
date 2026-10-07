@@ -558,15 +558,28 @@ footer p { margin: 0; }
 
 .location-photo-section strong { color: #fff; }
 
-/* Texto claro nas áreas sobre imagens; o quadro de informações permanece preto */
-main .original-section h2 {
+/* Texto claro no conteúdo principal; quadros de informações permanecem escuros */
+main .original-section h2,
+main .original-section h3,
+main .original-section p,
+main .original-section strong,
+main .original-section span,
+main .original-section small {
   color: #fff;
 }
 
-main .original-section > .content-narrow > p {
-  color: #fff;
+/* O quadro de informações do casamento continua com texto preto */
+.details-photo-section .content-narrow > div p,
+.details-photo-section .content-narrow > div strong {
+  color: #000 !important;
 }
 
-main .original-section > .content-narrow > p strong {
-  color: #fff;
+/* O quadro Pix também mantém contraste próprio sobre o fundo branco */
+.pix-box p,
+.pix-box span {
+  color: var(--ink-soft) !important;
+}
+
+.pix-box strong {
+  color: var(--navy) !important;
 }

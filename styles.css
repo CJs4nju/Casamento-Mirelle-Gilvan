@@ -510,3 +510,5 @@ footer p { margin: 0; }
   .map-card { height: 300px; }
   .details-grid { grid-template-columns: 1fr; }
 }
+
+.details-photo-section .content-narrow > div strong { color: #000; }

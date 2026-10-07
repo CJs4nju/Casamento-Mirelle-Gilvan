@@ -387,6 +387,7 @@ strong {
 .original-section.location-photo-section {
   background: linear-gradient(rgba(23, 26, 74, 0.55), rgba(23, 26, 74, 0.68)), url('./Foto-local.jpg') center/cover no-repeat;
   color: #fff;
+  border-bottom: 0 !important;
 }
 
 .location-photo-section h2,

@@ -320,6 +320,10 @@ h1, h2, h3, h4 {
   border-bottom: 0;
 }
 
+.gifts-confirmation-section + .gifts-confirmation-section {
+  border-top: 0;
+}
+
 .gifts-confirmation-section h2,
 .gifts-confirmation-section > .content-narrow > p {
   color: #fff;

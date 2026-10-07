@@ -557,3 +557,16 @@ footer p { margin: 0; }
 .details-photo-section .content-narrow > div strong { color: #000; }
 
 .location-photo-section strong { color: #fff; }
+
+/* Texto claro nas áreas sobre imagens; o quadro de informações permanece preto */
+main .original-section h2 {
+  color: #fff;
+}
+
+main .original-section > .content-narrow > p {
+  color: #fff;
+}
+
+main .original-section > .content-narrow > p strong {
+  color: #fff;
+}

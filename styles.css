@@ -570,10 +570,11 @@ main .original-section small {
   color: #fff;
 }
 
-/* O quadro de informações do casamento continua com texto preto */
+/* Quadro de informações: texto branco e legível sobre a foto */
 .details-photo-section .content-narrow > div p,
 .details-photo-section .content-narrow > div strong {
-  color: #000 !important;
+  color: #fff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
 }
 
 /* O quadro Pix também mantém contraste próprio sobre o fundo branco */

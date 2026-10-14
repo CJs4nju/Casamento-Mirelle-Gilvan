@@ -589,7 +589,12 @@ main .original-section small {
 
 .rsvp-message {
   max-width: 620px;
-  margin: 1.25rem auto 0;
-  color: #fff !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+  margin: 1.5rem auto 0;
+  padding: 1.8rem;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.98);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+  color: var(--navy) !important;
+  text-shadow: none;
 }

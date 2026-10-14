@@ -586,3 +586,10 @@ main .original-section small {
 .pix-box strong {
   color: var(--navy) !important;
 }
+
+.rsvp-message {
+  max-width: 620px;
+  margin: 1.25rem auto 0;
+  color: #fff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+}

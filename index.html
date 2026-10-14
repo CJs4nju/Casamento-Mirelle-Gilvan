@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=white-text-5">
+  <link rel="stylesheet" href="./styles.css?v=white-text-6">
 </head>
 <body>
 
@@ -128,7 +128,8 @@
         <h2>Confirmação de Presença</h2>
         <p>Pedimos, gentilmente, que confirmem sua presença clicando no botão abaixo.</p>
         <div style="margin-top: 1.5rem;">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdPel8sn8MhAWAC6quJwpyw_07BhPGHU8Pi807hSxxMrJ3zbg/viewform?pli=1" target="_blank" rel="noopener noreferrer" class="site-button site-button--navy">Confirmar Presença (RSVP)</a>
+          <button class="site-button site-button--navy" type="button" id="rsvp-message-btn" aria-expanded="false" aria-controls="rsvp-message">Confirmar Presença (RSVP)</button>
+          <p class="rsvp-message" id="rsvp-message" hidden>Em breve, disponibilizaremos o formulário para confirmação de presença. Será uma alegria celebrar este momento ao lado de vocês.</p>
         </div>
       </div>
     </section>

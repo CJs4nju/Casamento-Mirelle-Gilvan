@@ -135,4 +135,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   copyPixButton.addEventListener('click', copyPixKey);
+
+  // Exibir aviso enquanto a confirmação de presença ainda não está disponível
+  const rsvpMessageButton = byId('rsvp-message-btn');
+  const rsvpMessage = byId('rsvp-message');
+
+  rsvpMessageButton.addEventListener('click', () => {
+    const isHidden = rsvpMessage.hidden;
+    rsvpMessage.hidden = !isHidden;
+    rsvpMessageButton.setAttribute('aria-expanded', String(isHidden));
+  });
 });
